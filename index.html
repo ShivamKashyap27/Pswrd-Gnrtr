@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Genrator</title>
+    <link rel="passwordG icon" href="./lock.png">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <p>PASSWORD GENERATOR</p>
+            <div class="wrapper">
+                <div class="input-box">
+                    <input id="password" type="text" disabled>
+                    <span id="copy" onclick="copyPassword()">Copy</span>
+                </div>
+                <div class="pass-settings">
+                    <lable class="title">Password Settings</lable>
+                    <ul class="options">
+                        <li class="option">
+                            <input checked id="lowercase" type="checkbox">
+                            <lable for="lowercase">Lowercase (a-z)</lable>
+                        </li>
+                        <li class="option">
+                            <input id="uppercase" type="checkbox">
+                            <lable for="uppercase">Uppercase (A-Z)</lable>
+                        </li>
+                        <li class="option">
+                            <input id="numbers" type="checkbox" checked>
+                            <lable for="numbers">Numbers (0-9)</lable>
+                        </li>
+                        <li class="option">
+                            <input id="symbols" type="checkbox" checked>
+                            <lable for="symbols">Symbols(!-$^+)</lable>
+                        </li>
+                        <li class="option">
+                            <input id="exc-duplicate" type="checkbox">
+                            <lable for="exc-duplicate">Exclude Duplicate</lable>
+                        </li>
+                        <li class="option">
+                            <input id="spaces" type="checkbox">
+                            <lable for="spaces">Including Spaces</lable>
+                        </li>
+                    </ul>
+                </div>
+                <button class="generate-btn" id="generate" onclick="generatePassword()">Generate Password</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
